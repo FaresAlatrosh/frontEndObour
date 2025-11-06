@@ -1,0 +1,233 @@
+/* =============== */
+/* Header & Logo */
+/* =============== */
+.main-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =============== */
+/* Navigation Links */
+/* =============== */
+.header-link {
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.header-link:hover {
+  background-color: #f1f5f9;
+  color: #1e40af;
+  transform: translateY(-2px);
+}
+
+.header-link.active {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* =============== */
+/* Auth Buttons */
+/* =============== */
+.login-btn,
+.register-btn,
+.logout-btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-btn {
+  color: #1e3a8a;
+  background-color: #f1f5ff;
+}
+
+.login-btn:hover {
+  background-color: #e0ebff;
+  transform: translateY(-2px);
+}
+
+.register-btn {
+  color: #fff;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.logout-btn:hover {
+  background-color: #fecaca;
+  transform: translateY(-2px);
+}
+
+/* =============== */
+/* Mobile Menu */
+/* =============== */
+.mobile-menu {
+  animation: slideFadeIn 0.4s ease-out;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu .mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu .mobile-link.active {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: #fff;
+}
+
+.mobile-menu .mobile-link:hover {
+  background-color: #f1f5f9;
+}
+
+/* =============== */
+/* Animations */
+/* =============== */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+.user-info {
+  animation: fadeIn 0.4s ease;
+}
+
+/* =============== */
+/* Cards (Optional) */
+/* =============== */
+.custom-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  height: 100%;
+  animation: fadeIn 0.6s ease both;
+}
+
+.custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
+}
+
+.custom-card .card-body {
+  padding: 1.5rem;
+}
+
+.custom-card .card-icon {
+  font-size: 32px;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.custom-card .card-title {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* =============== */
+/* Responsive */
+/* =============== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .auth-section {
+    flex-direction: column;
+  }
+
+  .auth-btn,
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
